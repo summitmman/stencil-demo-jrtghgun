@@ -10,7 +10,7 @@ import { PaginationOptions } from "swiper/types/components/pagination";
 export namespace Components {
     interface BenifexIcon {
         "name": string;
-        "variant": 'outline' | 'fill';
+        "variant"?: 'outline' | 'fill';
     }
     interface BenifexIconSprite {
     }
