@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Demo Page</title>
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .number-slide1 {
+        background: rgb(64, 175, 255);
+        background: linear-gradient(
+          128deg,
+          rgba(64, 175, 255, 1) 0%,
+          rgba(63, 97, 255, 1) 100%
+        );
+      }
+
+      .number-slide2 {
+        background: rgb(255, 75, 64);
+        background: linear-gradient(
+          128deg,
+          rgba(255, 154, 63, 1) 0%,
+          rgba(255, 75, 64, 1) 100%
+        );
+      }
+
+      .number-slide3 {
+        background: rgb(182, 255, 64);
+        background: linear-gradient(
+          128deg,
+          rgba(182, 255, 64, 1) 0%,
+          rgba(63, 255, 71, 1) 100%
+        );
+      }
+
+      .number-slide4 {
+        background: rgb(64, 255, 242);
+        background: linear-gradient(
+          128deg,
+          rgba(64, 255, 242, 1) 0%,
+          rgba(63, 188, 255, 1) 100%
+        );
+      }
+
+      .number-slide5 {
+        background: rgb(255, 64, 156);
+        background: linear-gradient(
+          128deg,
+          rgba(255, 64, 156, 1) 0%,
+          rgba(255, 63, 63, 1) 100%
+        );
+      }
+      .number-slide6 {
+        background: rgb(64, 76, 255);
+        background: linear-gradient(
+          128deg,
+          rgba(64, 76, 255, 1) 0%,
+          rgba(174, 63, 255, 1) 100%
+        );
+      }
+
+      poc-nav-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: calc(var(--gn-z-index) + 10);
+      }
+    </style>
+  </head>
+  <body>
+    <content-slider>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="levo-content-slider__slide swiper-slide number-slide1">
+            1
+          </div>
+          <div class="levo-content-slider__slide swiper-slide number-slide2">
+            2
+          </div>
+          <div class="levo-content-slider__slide swiper-slide number-slide3">
+            3
+          </div>
+          <div class="levo-content-slider__slide swiper-slide number-slide4">
+            4
+          </div>
+          <div class="levo-content-slider__slide swiper-slide number-slide5">
+            5
+          </div>
+          <div class="levo-content-slider__slide swiper-slide number-slide6">
+            6
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </content-slider>
+
+    <poc-nav-drawer></poc-nav-drawer>
+
+    <script type="module" src="/build/demo.esm.js"></script>
+    <script nomodule src="/build/demo.js"></script>
+  </body>
+</html>
