@@ -21,6 +21,12 @@ export class POCNavDrawer {
                     <li>My Benefits</li>
                     <li>Add benefits</li>
                     <li>Salary & funding</li>
+                    <li>My Benefits</li>
+                    <li>Add benefits</li>
+                    <li>Salary & funding</li>
+                    <li>My Benefits</li>
+                    <li>Add benefits</li>
+                    <li>Salary & funding</li>
                   </ul>
                 </poc-nav-menu-item>
               </li>
@@ -52,6 +58,14 @@ export class POCNavDrawer {
               <li>
                 <poc-nav-menu-item icon="discounts">
                   <div class="tooltip">Discounts</div>
+                  <ul class="secondary">
+                    <li>My Benefits</li>
+                    <li>Add benefits</li>
+                    <li>Salary & funding</li>
+                    <li>My Benefits</li>
+                    <li>Add benefits</li>
+                    <li>Salary & funding</li>
+                  </ul>
                 </poc-nav-menu-item>
               </li>
             </ul>
