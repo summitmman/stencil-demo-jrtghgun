@@ -19,8 +19,8 @@ import { icons } from '../benifex-icon-sprite/icons';
   styleUrl: 'benifex-icon.scss',
 })
 export class BenifexIcon {
-  @Prop() name: string;
-  @Prop() variant: 'outline' | 'fill';
+  @Prop() name!: string;
+  @Prop() variant: 'outline' | 'fill' = 'outline';
   @Element() el!: HTMLElement;
 
   render() {

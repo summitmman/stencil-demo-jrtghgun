@@ -8,10 +8,19 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { SwiperOptions } from "swiper/types/swiper-options";
 import { PaginationOptions } from "swiper/types/components/pagination";
 export namespace Components {
+    interface BenifexIcon {
+        "name": string;
+        "variant": 'outline' | 'fill';
+    }
+    interface BenifexIconSprite {
+    }
     interface ContentSlider {
         "options": SwiperOptions | string;
         "paginationOptions": PaginationOptions | string;
         "target": string;
+    }
+    interface InlineSvg {
+        "svg": string;
     }
     interface PocNavDrawer {
     }
@@ -20,11 +29,29 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLBenifexIconElement extends Components.BenifexIcon, HTMLStencilElement {
+    }
+    var HTMLBenifexIconElement: {
+        prototype: HTMLBenifexIconElement;
+        new (): HTMLBenifexIconElement;
+    };
+    interface HTMLBenifexIconSpriteElement extends Components.BenifexIconSprite, HTMLStencilElement {
+    }
+    var HTMLBenifexIconSpriteElement: {
+        prototype: HTMLBenifexIconSpriteElement;
+        new (): HTMLBenifexIconSpriteElement;
+    };
     interface HTMLContentSliderElement extends Components.ContentSlider, HTMLStencilElement {
     }
     var HTMLContentSliderElement: {
         prototype: HTMLContentSliderElement;
         new (): HTMLContentSliderElement;
+    };
+    interface HTMLInlineSvgElement extends Components.InlineSvg, HTMLStencilElement {
+    }
+    var HTMLInlineSvgElement: {
+        prototype: HTMLInlineSvgElement;
+        new (): HTMLInlineSvgElement;
     };
     interface HTMLPocNavDrawerElement extends Components.PocNavDrawer, HTMLStencilElement {
     }
@@ -39,17 +66,29 @@ declare global {
         new (): HTMLPocNavMenuItemElement;
     };
     interface HTMLElementTagNameMap {
+        "benifex-icon": HTMLBenifexIconElement;
+        "benifex-icon-sprite": HTMLBenifexIconSpriteElement;
         "content-slider": HTMLContentSliderElement;
+        "inline-svg": HTMLInlineSvgElement;
         "poc-nav-drawer": HTMLPocNavDrawerElement;
         "poc-nav-menu-item": HTMLPocNavMenuItemElement;
     }
 }
 declare namespace LocalJSX {
+    interface BenifexIcon {
+        "name": string;
+        "variant"?: 'outline' | 'fill';
+    }
+    interface BenifexIconSprite {
+    }
     interface ContentSlider {
         "onSliderInit"?: (event: CustomEvent<SwiperCore>) => void;
         "options"?: SwiperOptions | string;
         "paginationOptions"?: PaginationOptions | string;
         "target"?: string;
+    }
+    interface InlineSvg {
+        "svg": string;
     }
     interface PocNavDrawer {
     }
@@ -57,7 +96,10 @@ declare namespace LocalJSX {
         "icon": string;
     }
     interface IntrinsicElements {
+        "benifex-icon": BenifexIcon;
+        "benifex-icon-sprite": BenifexIconSprite;
         "content-slider": ContentSlider;
+        "inline-svg": InlineSvg;
         "poc-nav-drawer": PocNavDrawer;
         "poc-nav-menu-item": PocNavMenuItem;
     }
@@ -66,7 +108,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "benifex-icon": LocalJSX.BenifexIcon & JSXBase.HTMLAttributes<HTMLBenifexIconElement>;
+            "benifex-icon-sprite": LocalJSX.BenifexIconSprite & JSXBase.HTMLAttributes<HTMLBenifexIconSpriteElement>;
             "content-slider": LocalJSX.ContentSlider & JSXBase.HTMLAttributes<HTMLContentSliderElement>;
+            "inline-svg": LocalJSX.InlineSvg & JSXBase.HTMLAttributes<HTMLInlineSvgElement>;
             "poc-nav-drawer": LocalJSX.PocNavDrawer & JSXBase.HTMLAttributes<HTMLPocNavDrawerElement>;
             "poc-nav-menu-item": LocalJSX.PocNavMenuItem & JSXBase.HTMLAttributes<HTMLPocNavMenuItemElement>;
         }
